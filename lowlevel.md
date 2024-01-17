@@ -1,7 +1,7 @@
 # Low Level Stuff
 
-* [Introduction](intro)
-* [Xor](xor)
+* [Introduction](#intro)
+* [Xor](#xor)
 
 
 <h2 id="intro">Introduction</h2>
