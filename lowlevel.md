@@ -1,4 +1,4 @@
-# Low Level Stuff
+ # Low Level Stuff
 
 * [Introduction](#intro)
 * [Xor](#xor)
@@ -10,7 +10,7 @@ Bits represent powers of 2, because evey bit can store one of two values (0 or 1
 
 Essentially, every time you add a bit, you double the previous number of posible arangements, or representations, by two.
 
-Suppose you have one bit, it could be 0 or 1. So, two possible arangments:
+Suppose you have one bit, it could be 0 or 1. So, two possible arrangements:
 
 ```
 0
@@ -28,7 +28,7 @@ Suppose you have one bit, it could be 0 or 1. So, two possible arangments:
 1
  1
 ```
-So possible arangements are 00, 01, or 10, 11.
+So possible arrangements are `00`, `01`, or `10`, `11`.
 
 | Power of Two| Value         |
 | ------------ | --- |
