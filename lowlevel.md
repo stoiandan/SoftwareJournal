@@ -91,7 +91,7 @@ How many bits do you need to represent an arbitrary natural number _n_?
 
 Well, if $2^m$ is _greater_ than your _n_, then `m` is your answer. So you keep raising `2` to increasing powers ( $2^0$, $2^1$, $2^2$... $2^m$ ) until you reach a _number_ (_m_) greater than your desired _n_.
 
-However, there's a math _operation_ called `log`, wich is the _opposite_ of raising to a power. If $2^4=16$, think of $\log{_2}{16}$ as being the question: What power should  $2$ (the base) be raise at, so that it yieds $16$? The  answer is $4$, $\log{_2}{16}=4$
+However, there's a math _operation_ called `log`, wich is the _opposite_ of raising to a power. If $2^4=16$, think of $\log{_2}{16}$ (read as log base 2 of 16) as being the question: What power should  $2$ (the base) be raise at, so that it yieds $16$? The  answer is $4$, $\log{_2}{16}=4$
 
 So the answer to the initial problem is $\log{_2}{n}, also having the answer rouded-up( for example if the result is $5.3$ we needs $6$ bits).
 
