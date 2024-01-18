@@ -5,30 +5,39 @@
 
 
 <h2 id="intro">Introduction</h2>
+Think of a sigle _bit_ as a _container_ that can store/represent one of two values at a time: either `0` or `1`. That's it!
 
-Bits represent powers of 2, because evey bit can store one of two values (0 or 1), the total number of values that can be stored by n bits is  2<sup>n</sup>.
+The convention then is to call a series of _8 bits_ taken together a  _byte_, but notice, that's just a convetion, though used very often, there is no logical reason to no have, for example a 9 bits be a byte, just a thing to keep in mind. From this simple definition, all sorts of mathematical properties arise.
 
-Essentially, every time you add a bit, you double the previous number of posible arangements, or representations, by two.
+For example,  every time you _increase_ the number of bits you have, you _double_ the previous number of representations (of unique combinations). 
 
-Suppose you have one bit, it could be 0 or 1. So, two possible arrangements:
+So starting from one bit, that can have one of two values (`0` or `1`) you always double the numer of possible values your bits ca store/represent as you increase the number of bits you have at your disposal.
+This is why Bbits represent powers of 2, if one bit stores $2^1$ values, two bits can store $2^2$ values and so on. The total number of values that can be stored by `n` bits is  $2^n$.
+
+
+To represent this more visually, suppose you have one bit, it could be 0 or 1. So, two possible arrangements:
 
 ```
-0
-
-1
+- one bit possibilites: 0      1
 ```
  Now suppose you add another bit, every branch of our previous posibilities gets two otther branches:
   
 ```
-  0
-0 
-  1
-  
-  0
-1
- 1
+   - one bit possibilites:      0      1   - two values
+   - two bits possibilites:   0  1    0  1 - four values
 ```
-So possible arrangements are `00`, `01`, or `10`, `11`.
+and so one:
+```
+   - one bit possibilites:            0                 1   - two values
+   - two bits possibilites:      0         1       0         1 - four values
+   - three bits possibilites:  0    1    0  1    0   1    0   1 - eight values
+  // to obtain a unique representation you just traverse each level, starting top, and choose one direction/value per level
+```
+
+Every time we consider a new _bit_, we don't just _add_ two additional possible representations, rather we _double_ the previous number of possible representations, starting with a number of two possible representations, offered by _one bit_ that can either be `0` or `1`, then doubling that, from two possible representations to four. So then possible arrangements are `00`, `01`, or `10`, `11`.
+
+
+This efective doubling means of each previous value with a new set of zero and one means matemathically that we raise to the power of two:
 
 | Power of Two| Value         |
 | ------------ | --- |
@@ -43,7 +52,12 @@ So possible arrangements are `00`, `01`, or `10`, `11`.
 
 
 
-So notice, if you want to represent exactly one of those numbers in an *8 bit*, **byte**, you just set that bit ot 1. For any other number, it's a combination of bits.
+Notice, if you want to represent exactly one of those numbers in an *8 bit*, **byte**, you just set that bit ot 1. For any other number, it's a combination of bits.
+
+
+If you're interested in understanding how does the magic of storing \verb|0|s or \verb|1|s happens at hardware level, a simple imagination exercise that may satisfy your curiosity is _electric charge_ . Imagine being able to _both_ measure the _charge_ of an _electronic component_ and charge/discharge it. If the component is charged, by convention, we treat that as being a `1`, and if it's discharged, we consider it `0`.
+
+Having enough such minuscule components and combining them together allows us to store information, leaving it to us to assign meaning to each unique combination of zeros and ones.
 
 ### What is the max number you can store?
 
