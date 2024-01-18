@@ -77,9 +77,10 @@ How many bits do you need to represent an arbitrary natural number _n_?
 
 Well, if `2`<sup>`m`</sup> is _greater_ than your _n_, then `m` is your answer. So you keep raising `2` to differnet powers (`2`<sup>`1`</sup>, `2`<sup>`2`</sup>...) until you reach a _number_ greater than your initial _m_.
 
-However, there's a math _operation_ called `log`, wich is the _opposite_ of raising to a power. If `2`<sup>`4`</sup>=`16`, think of `log`<sub>`2`</sub>`16` as being the question: What power should be raise `2` (the base) so that it yieds `16`? The  answer is `4`.
+However, there's a math _operation_ called `log`, wich is the _opposite_ of raising to a power. If `2`<sup>`4`</sup>`=16`, think of `log`<sub>`2`</sub>`16` as being the question: What power should  `2` (the base) be raise at, so that it yieds `16`? The  answer is `4`, `log`<sub>`2`</sub>`16`=`4`.
 
-So you can do `log`<sub>2</sub>`n` and round it up.
+So the answer to the initial problem is `log`<sub>2</sub>`n`,  and having round it up (if for example the result is `5.3` we needs `6` bits ).
+
 
 <h2 id="xor">XOR</h2>
 
