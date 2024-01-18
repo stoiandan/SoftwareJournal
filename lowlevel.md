@@ -83,10 +83,10 @@ So you can do `log`<sub>2</sub>`n` and round it up
 
 <h2 id="xor">XOR</h2>
 
-Exclusive or is just like or, execpt it's only true if operands are distinct, hecne the exclusivity
+XOR, also known as **exclusive OR** is just like **OR**, execpt it's only true if operands are distinct, hecne the exclusivity.
 
 
-This is the OR truth table:
+This is the **OR** truth table:
 
 | Operand 1| Operand 2 | Is it true?|
 | ------------ | --- |------|
@@ -96,7 +96,7 @@ This is the OR truth table:
 | 1|1 |1 |
 
 
-This is the XOR truth table:
+This is the **XOR** truth table:
 
 | Operand 1| Operand 2 | Is it true?|
 | ------------ | --- |------|
