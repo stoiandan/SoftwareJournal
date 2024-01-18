@@ -5,6 +5,7 @@
 
 
 <h2 id="intro">Introduction</h2>
+
 Think of a sigle _bit_ as a _container_ that can store/represent one of two values at a time: either `0` or `1`. That's it!
 
 The convention then is to call a series of _8 bits_ taken together a  _byte_, but notice, that's just a convetion, though used very often, there is no logical reason to no have, for example a 9 bits be a byte, just a thing to keep in mind. From this simple definition, all sorts of mathematical properties arise.
