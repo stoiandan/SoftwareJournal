@@ -63,15 +63,15 @@ Having enough such minuscule components and combining them together allows us to
 
 If you set all bits to 1, you'll get `1 + 2 + 4 + ... 128`. What's that equal to?
 
-Well, imagine you have one additional bit `2`<sup>`8`</sup> (256), and you want to represent that number, 256.
+Well, imagine you have one additional bit  $2^8$ (256), and you want to represent that number, 256.
 
 So all you do is set the last bit, 2<sup>8</sup> to one and you're done.
 
 Now, if you substract one from 256 you get 255, and the binary representation of that is the 256 bit set to 0 and all bits beneath it set to one.
 
-So for any number of _n_ bits, the greatest number that can be stored in _n_ bits is 2<sup>n+1</sup> -1.
+So for any number of _n_ bits, the greatest value that can be stored is $2^{(n+1)}-1$
 
-So, if  `2`<sup>`n`</sup> is the total number of distinct values we can fit, they range from 0 up to `2`<sup>`n+1`</sup> `-1`
+But notice, that is the greatest number we can store, however the _range_ starts from `0`, not from `1` (zero is also a value), and theferore we can store $2^n$ _distinct_ numbers in `n` bits, ranging from 0 up to $2^{(n+1)-1}$
 
 
 ### Divide by two?
@@ -89,11 +89,11 @@ Since all powers of two are even, except 0, if the first bit is set to 1, we hav
 
 How many bits do you need to represent an arbitrary natural number _n_?
 
-Well, if `2`<sup>`m`</sup> is _greater_ than your _n_, then `m` is your answer. So you keep raising `2` to differnet powers (`2`<sup>`1`</sup>, `2`<sup>`2`</sup>...`2`<sup>`m`</sup>) until you reach a _number_ (_m_) greater than your initial _n_.
+Well, if $2^m$ is _greater_ than your _n_, then `m` is your answer. So you keep raising `2` to increasing powers ( $2^0$, $2^1$, $2^2$... $2^m$ ) until you reach a _number_ (_m_) greater than your desired _n_.
 
-However, there's a math _operation_ called `log`, wich is the _opposite_ of raising to a power. If `2`<sup>`4`</sup>`=16`, think of `log`<sub>`2`</sub>`16` as being the question: What power should  `2` (the base) be raise at, so that it yieds `16`? The  answer is `4`, `log`<sub>`2`</sub>`16`=`4`.
+However, there's a math _operation_ called `log`, wich is the _opposite_ of raising to a power. If $2^4=16$, think of $\log{_2}{16}$ as being the question: What power should  $2$ (the base) be raise at, so that it yieds $16$? The  answer is $4$, $\log{_2}{16}=4$
 
-So the answer to the initial problem is `log`<sub>2</sub>`n`,  and having round it up (if for example the result is `5.3` we needs `6` bits ).
+So the answer to the initial problem is $\log{_2}{n}, also having the answer rouded-up( for example if the result is $5.3$ we needs $6$ bits).
 
 
 <h2 id="xor">XOR</h2>
