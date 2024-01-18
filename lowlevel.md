@@ -51,11 +51,11 @@ If you set all bits to 1, you'll get `1 + 2 + 4 + ... 128`. What's that equal to
 
 Well, imagine you have one additional bit `2`<sup>`8`</sup> (256), and you want to represent that number, 256.
 
-So all you do is se the last bit, 2<sup>8</sup> to one and you're done.
+So all you do is set the last bit, 2<sup>8</sup> to one and you're done.
 
 Now, if you substract one from 256 you get 255, and the binary representation of that is the 256 bit set to 0 and all bits beneath it set to one.
 
-So for any number of n bits, the max number that can fit is 2<sup>n+1</sup> -1.
+So for any number of _n_ bits, the greatest number that can be stored in _n_ bits is 2<sup>n+1</sup> -1.
 
 So, if  `2`<sup>`n`</sup> is the total number of distinct values we can fit, they range from 0 up to `2`<sup>`n+1`</sup> `-1`
 
@@ -71,11 +71,11 @@ This we efectiviley divide by two.
 Since all powers of two are even, except 0, if the first bit is set to 1, we have na odd number, else it's even.
 
 
-### How many bits do we need?
+### How many bits do we need to store a number?
 
-How many bits do you need to represent an arbitrary natural number n?
+How many bits do you need to represent an arbitrary natural number _n_?
 
-Well, if 2<sup>m</sup> is greater than your n, m is your answer. So you keep raising 2 to differnet powers until you reach taht number.
+Well, if `2`<sup>`m`</sup> is _greater_ than your _n_, then `m` is your answer. So you keep raising `2` to differnet powers (`2`<sup>`1`</sup>, `2`<sup>`2`</sup>...) until you reach a _number_ greater than your initial _m_.
 
 However, there's a math operation called `log`, wich is the opposite of that `log`<sub>2</sub>`16` means 2 at what power raised gives us 16? So the answer is 4
 
