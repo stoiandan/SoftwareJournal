@@ -38,7 +38,7 @@ The whole number then is
 
 `1 1 0 0 1 . 1 0 0 1 1`
 
- However, we want to bring this to (scientific notation)[https://en.wikipedia.org/wiki/Scientific_notation], wich means only one digit should come after the period:
+ However, we want to bring this to [scientific notation](https://en.wikipedia.org/wiki/Scientific_notation), wich means only one digit should come after the period:
 
  `1 . 1 0 0 1  1 0 0 1 1`
 
