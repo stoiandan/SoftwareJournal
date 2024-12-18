@@ -30,7 +30,7 @@ You can add properties to every `Dog` instance by:
    const spark = new Dog('spark');
 ```
 
-So now all dogs have a `bark` method. Note instances of `Dog` have a `__proto__` method that point to `Dog.prototype`, they're not the same things, one points to another.
+So now all dogs have a `bark` method. Note, instances of `Dog` have a `__proto__` method that point to `Dog.prototype`, they're not the same things, one points to another.
 
 Ecmascript recomments not to use `__proto__`, but `Object.getPrototypeOf()` method. For example:
 
