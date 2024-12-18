@@ -1,6 +1,6 @@
 # Memory Allocation in JS
 
-In Ecamscript (or JS, but don't tell Oracle), the `Object` type has a bunch of methods to copy memory around. We'll look at two:
+In Ecamscript (or JS, but don't tell Oracle), the `Object` type has a bunch of methods to copy memory around. We'll look at two, but first:
 
 
 ## Introduction to prototyping
