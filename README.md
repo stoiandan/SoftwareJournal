@@ -7,8 +7,10 @@ A Programmer's journey. This is my personal software journal where I record thin
 * [IEEE 754 - Or how fractional numbers are stored in a computer](ieee754.md)
 * [Javascript prototyping and Object creation methods](js_memory_allocation.md)
 
-
-dotnet
+## dotnet
 * [Unmanaged code](csharp/unmanaged.md)
 * [ValueTask](csharp/valuetask.md)
+
+## networking
+* [IPv6 multicast (a sort of broadcast)](networking/ipv6multicast.md)
 
