@@ -2,7 +2,7 @@
 
 * [Introduction](#intro)
 * [Xor](#xor)
-
+* [Endianness(#endianness)]
 
 <h2 id="intro">Introduction</h2>
 
@@ -134,3 +134,25 @@ d ^ a == b // true
 d ^ b == a // true
  ```
 
+
+
+
+<h2 id="endianness">The Bid & Little Endian</h2>
+
+Within a _single_ byte, we always read the bits right to left, so the least significant bit is the rightmost:
+
+|0|0|0|0|0|0|1|0|
+|-|-|-|-|-|-|-|-|
+|2^7|2^6|2^5|2^4|2^3|2^2|2^1|2^0|
+
+However, when you have a series of octets (bytes), say the (hexadecimal) number `0x000A` (formed of bytes `00` and `0A`) in what order do you read those bytes?
+Well that depends on the way the CPU was designed (some where designed to support both ways; by commuting between them) and there are advantages to both ways of doing things.
+`x86_64` (Intel & AMD) are both _little endian_ (meaning they first read the right most `0A` byte) while traditionally, RISC arhitectures (Like IBM _Power-PC_) are _big endian_:
+
+Here's a small Swift programm that proves the point:
+
+```Swift
+let number: Uint16 = 0x0100 // force cast to Uint16 to prevent additional filling with bytes that would have been caused by a 32bit value
+print(number.littleEndian) // 265 as first 8 positions are 0  [0 0 0 0] <- first hexa 0 (a hexa letter is 4 bits)  [0 0 0 0] <- second hexa 0; ergo the first bit to be 1 is 2^8
+print(number.bigEndian) // 1 as first octet is hexa `01` so 0 0 0 0 0 0 0 1 
+```
