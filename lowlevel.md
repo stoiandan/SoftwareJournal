@@ -2,7 +2,7 @@
 
 * [Introduction](#intro)
 * [Xor](#xor)
-* [Endianness(#endianness)]
+* [Endianness](#endianness)
 
 <h2 id="intro">Introduction</h2>
 
