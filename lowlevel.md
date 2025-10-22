@@ -143,7 +143,7 @@ Within a _single_ byte, we always read the bits right to left, so the least sign
 
 |0|0|0|0|0|0|1|0|
 |-|-|-|-|-|-|-|-|
-|2^7|2^6|2^5|2^4|2^3|2^2|2^1|2^0|
+|$2^7$|$2^6$|$2^5$|$2^4$|$2^3$|$2^2$|$2^1$|$2^0$|
 
 However, when you have a series of octets (bytes), say the (hexadecimal) number `0x000A` (formed of bytes `00` and `0A`) in what order do you read those bytes?
 Well that depends on the way the CPU was designed (some where designed to support both ways; by commuting between them) and there are advantages to both ways of doing things.
