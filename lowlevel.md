@@ -137,7 +137,7 @@ d ^ b == a // true
 
 
 
-<h2 id="endianness">The Bid & Little Endian</h2>
+<h2 id="endianness">The Big & Little Endian</h2>
 
 Within a _single_ byte, we always read the bits right to left, so the least significant bit is the rightmost:
 
